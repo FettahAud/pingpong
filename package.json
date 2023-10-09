@@ -23,6 +23,7 @@
     "react-dom": "18.2",
     "three": "^0.148.0",
     "vercel": "^28.15.0",
-    "vite-plugin-glsl": "^1.1.2"
+    "vite-plugin-glsl": "^1.1.2",
+    "zustand": "^4.4.3"
   }
 }

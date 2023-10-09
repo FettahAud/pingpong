@@ -1,13 +1,21 @@
 import {RigidBody} from "@react-three/rapier";
 import {useGLTF} from "@react-three/drei";
 import {useEffect, useRef} from "react";
-import sound from "../public/sounds/ball-hit.mp3";
+import sound from "../../public/sounds/ball-hit.mp3";
+import {useStore} from "zustand";
+import {gameStore} from "../index.jsx";
 
 export default function Ball() {
+    const {gameState} = gameStore()
+
     const ballModel = useGLTF('/models/ball.glb')
     const ball = useRef();
     useEffect(() => {
-        console.log('rendered')
+        if(gameState === "gameOver") {
+            ball.current.setBodyType(1)
+        } else {
+            ball.current.setBodyType(0)
+        }
     }, []);
     const hit = () => {
         // play hit sound

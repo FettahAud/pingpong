@@ -2,6 +2,8 @@ import './style.css'
 import ReactDOM from 'react-dom/client'
 import { Canvas } from '@react-three/fiber'
 import Experience from './Experience.jsx'
+import GameUI from "./components/GameUI.jsx";
+import {create} from "zustand";
 
 const root = ReactDOM.createRoot(document.querySelector('#root'))
 
@@ -16,5 +18,11 @@ root.render(
         } }
     >
         <Experience />
+        <GameUI />
     </Canvas>
 )
+
+export const gameStore = create(set => ({
+    gameState: "gameOver",
+    setGameState: (gameState) => set({gameState})
+}))
