@@ -21,8 +21,3 @@ root.render(
         <GameUI />
     </Canvas>
 )
-
-export const gameStore = create(set => ({
-    gameState: "gameOver",
-    setGameState: (gameState) => set({gameState})
-}))

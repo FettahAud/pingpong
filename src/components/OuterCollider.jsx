@@ -1,5 +1,5 @@
 import {RigidBody} from "@react-three/rapier";
-import {gameStore} from "../index.jsx";
+import gameStore from "../store.js";
 
 export default function OuterCollider() {
     const {setGameState} = gameStore()

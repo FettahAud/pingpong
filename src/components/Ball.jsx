@@ -3,7 +3,7 @@ import {useGLTF} from "@react-three/drei";
 import {useEffect, useRef} from "react";
 import sound from "../../public/sounds/ball-hit.mp3";
 import {useStore} from "zustand";
-import {gameStore} from "../index.jsx";
+import gameStore from "../store.js";
 
 export default function Ball() {
     const {gameState} = gameStore()
