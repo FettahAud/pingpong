@@ -18,7 +18,6 @@ export default function Racket() {
         if(gameState === "gameOver") {
             racket.current?.setNextKinematicTranslation({x: 0 , y: 0 , z:0})
         } else {
-            console.log(clock.getElapsedTime())
             const eulerRotation = new Euler(0, 0, x / viewport.width * 1.2);
             const quaternion = new Quaternion();
             quaternion.setFromEuler(eulerRotation);
